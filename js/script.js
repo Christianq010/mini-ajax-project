@@ -3,6 +3,7 @@ function loadData(e) {
     //prevent default page refresh
     e.preventDefault();
 
+    // Select an div ID on the page and assign it to a variable
     var $body = $('body');
     var $wikiElem = $('#wikipedia-links');
     var $nytHeaderElem = $('#nytimes-header');
@@ -74,5 +75,5 @@ function loadData(e) {
     return false;
 }
 
-
+//When someone clicks submit on our form-container div run the loadData function
 $('#form-container').submit(loadData);
