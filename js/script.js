@@ -27,7 +27,7 @@ function loadData(e) {
 
 
     // NYT relevant stories AJAX request
-    var nytUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + streetStr +
+    var nytUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + address +
                     '&sort=newest&api-key=b8eac2475f894084acd924d4d1887fbd';
 
     $.getJSON(nytUrl, function(data) {
