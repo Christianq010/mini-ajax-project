@@ -21,6 +21,7 @@ function loadData(e) {
 
     $greeting.text('So you wanna live at ' + address + '?');
 
+    // Get a picture of the address
     var streetView = 'https://maps.googleapis.com/maps/api/streetview?size=600x400&location='
                     + address + '&key=AIzaSyD2tKBjRkdAtSJthU2Wm135MmtptdoQxm8';
 
@@ -49,6 +50,7 @@ function loadData(e) {
     });
 
     // Wikipedia AJAX Request
+    // Use JSON-P request for CORS (Cross Origin Resource Sharing)
     var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search='+ cityStr +'&format=json';
     var wikiFail = setTimeout(function(){
                     $wikiElem.text("Failed to get Wikipedia Resources");
